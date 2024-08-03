@@ -215,11 +215,12 @@ $(document).ready(function () {
 
     // Função para enviar dados do formulário
     function enviarDadosFormulario(formData) {
-        console.log(formData);
-        // Aqui você pode enviar os dados para o backend ou realizar outra ação desejada
-
-        // exibir mensagem de sucesso
-        alert("Dados enviados com sucesso!");
+        $('#progress-bar').removeClass('fs-display-none');
+        window.setTimeout(() => { 
+            $('#progress-bar').addClass('fs-display-none');
+            console.log(formData);
+            alert("Dados enviados com sucesso! (abra o console)");
+        }, "5000");
     }
     $(document).on('blur', '#cep', function () {
         let cep = $(this).val().replace(/\D/g, '');
