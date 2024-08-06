@@ -8,81 +8,54 @@
 
 <blockquote align="center">Tecnologia que flui!</blockquote>
 
-<p align="center">
-  <a href="#-Sobre-o-desafio">Sobre o desafio</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Requisitos">Requisitos</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Layout">Layout</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Entrega">Entrega</a>
-</p>
+# Como executar
 
-## 🚀 Sobre o desafio
+Este projeto é uma aplicação web para o cadastro de fornecedores e produtos. Para visualizar e interagir com a aplicação, é necessário rodar um servidor web local. Abaixo estão as instruções para configurar e executar um servidor local usando o **Live Server** com Visual Studio Code ou **http-server** via Node.js.
 
-O objetivo deste desafio é avaliar seus conhecimentos técnicos, como lida com os requisitos e capacidade de pensar em soluções.
+## Configuração do Live Server com Visual Studio Code
 
-Durante esse desafio vamos construir um formulário para cadastro de fornecedores e produtos.
+1. **Instalação do Visual Studio Code (VS Code)**
+   - Se você ainda não tem o VS Code instalado, baixe-o e instale-o a partir do [site oficial](https://code.visualstudio.com/).
 
-O desenvolvimento do formulário deve seguir o layout existente na guia: **Layout**
-
-
-## 📋 Requisitos
-
-
-- **HTML**: na versão 5;
-- **JAVASCRIPT**: Dar preferência a ao ECMA-6 no desenvolvimento do código; 
-- **BOOTSTRAP**:  
-  - [CSS](https://fluig.totvs.com/style-guide/css/fluig-style-guide.min.css)
-  - [JQUERY-3.5.1 ](https://jquery.com/download/)
-
-- **Outras Considerações**:
-  - Usar documentação de recursos e estilos conforme este [link](https://style.fluig.com/)
-  - Não deverão ser utilizados outros recursos tecnológicos para desenvolvimento 
+2. **Instalação da Extensão Live Server**
+   - Abra o VS Code.
+   - Vá para a aba de extensões, clicando no ícone de quadrado dividido na barra lateral esquerda ou usando o atalho `Ctrl+Shift+X`.
+   - Pesquise por "Live Server" na barra de busca e instale a extensão desenvolvida por *Ritwick Dey*.
   
- 
+      ![imagem da extensão](image.png)
 
-### Sobre o preenchimento dos campos existentes no formulário de cadastro
+3. **Iniciando o Servidor Local**
+   - Abra a pasta do projeto no VS Code.
+   - Clique com o botão direito no arquivo `index.html` no explorador de arquivos do VS Code.
+   - Selecione a opção "Open with Live Server".
+   - Isso abrirá o seu navegador padrão e iniciará o servidor local, servindo o projeto. A URL geralmente será algo como `http://127.0.0.1:5000/` ou `http://localhost:5000/`.
 
-- **Razão Social**: obrigatório
-- **Nome Fantasia**: obrigatório
-- **CNPJ**: obrigatório
-- **Inscrição Estadual**: opcional
-- **Inscrição Municipal**: opcional
-- **Endereço**: obrigatório (deve ser preenchido automaticamente usando a API via CEP)
-- **Nome da pessoa de contato**: obrigatório
-- **Telefone**: obrigatório
-- **E-mail**: obrigatório
-- **Tabela de Produtos**: obrigatório a inclusão de pelo menos 1 item
-  - **Descrição**: obrigatório
-  - **Unidade de Medida**: obrigatório
-  - **Quantidade em Estoque**: obrigatório
-  - **Valor Unitário**: obrigatório
-  - **Valor Total**: obrigatório (bloqueado, deve ser preenchido automaticamente considerando o valor unitário x a quantidade em estoque)
-- **Tabela de Anexos**: obrigatório a inclusão de pelo menos 1 documento
-  - Os documentos anexados deverão ser armazenados em memória (blob e session storage) para envio
-  - O Botão Excluir (lixeira) - Ao excluir o documento, deverá ser excluído da memória
-  - O Botão Visualizar (olho) - Ao visualizar o documento, deve ser feito o download
-- **Botão Salvar Fornecedor**: ao clicar no botão, deverá ser aberto modal de loading de envio, e deverá ser formatado um JSON com os dados a serem enviados, conforme exemplo: [jsonExemplo](./jsonExemplo/) 
-  - **OBS Sobre o JSON**: o JSON de resultado pode ser baixado ou apenas exibido no console do browser.
+## Configuração do http-server via Node.js (caso você tenha o node JS)
 
-## O que será avaliado no projeto
+1. **Instalação do Node.js**
+   - Se você ainda não tem o Node.js instalado, baixe e instale-o a partir do [site oficial](https://nodejs.org/).
 
-- Qualidade de código.
-- Estruturas de pastas.
-- Criação de componentes.
-- Soluções encontradas.
-- Tolerância a exceções do código.
-- Uso das tecnologias.
+2. **Instalação do http-server**
+   - Abra o terminal ou prompt de comando.
+   - Execute o seguinte comando para instalar o `http-server` globalmente:
+     ```bash
+     npm install -g http-server
+     ```
 
-## 🎨 Layout
+3. **Iniciando o Servidor Local**
+   - Navegue até a pasta do projeto no terminal:
+     ```bash
+     cd /caminho/para/sua/pasta
+     ```
+   - Inicie o servidor executando o comando:
+     ```bash
+     http-server
+     ```
+   - O servidor será iniciado e você verá uma mensagem com a URL onde o servidor está rodando, geralmente `http://127.0.0.1:8080` ou `http://localhost:8080`.
 
-O layout do desafio está em anexo na pasta [docs](./docs/) deste repositório.
+4. **Acessando o Projeto**
+   - Abra o navegador e acesse a URL fornecida pelo `http-server` para visualizar o projeto.
 
-## 📅 Entrega
+## Considerações Finais
 
-Esse desafio **deve ser entregue em um repositório público** do github e enviar um e-mail para `contato@vflows.com.br` **com o link** do repositório e com o assunto **`Entrega de desafio front-end`** para correção. (☞ ﾟヮﾟ)☞
-
----
-
-Made by [VFlows](https://vflows.com.br)
+Utilizando qualquer um desses métodos, o projeto será servido por um servidor web local, permitindo que as requisições para carregar componentes HTML, scripts e outros recursos funcionem corretamente e que o projeto possa ser visualizado corretamente.
