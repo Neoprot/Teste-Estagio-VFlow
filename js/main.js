@@ -182,6 +182,10 @@ $(document).ready(function () {
         });
 
         // Coletar dados dos anexos
+        if (formData.produtos.length == 0) {
+            alert("Por favor, Coloque um produto."); // Exibe o alerta de erro
+            return;
+        }
         let filesProcessed = 0;
         let totalFiles = $('#anexosContainer .anexo-item').length;
         $('#anexosContainer .anexo-item').each(function (index, element) {
